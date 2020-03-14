@@ -1,6 +1,7 @@
 # jellyfinPhpRedirect
- A simple redirect script to help you not burn through your data cap when streaming.
- The point of this script is to simply run a basic php script that redirects your browser either to the local server ip if it you are an ip previously said to be your home ip, or to a public ip if the user is accesing from an ip said to be an away ip. It also has logic for designating an ip as home or away using a very snazy web page.
+ A simple redirect script to help you not burn through your home data cap when streaming.
+ The point of this script is to simply run a basic php script that redirects the user's browser either to the local server ip if the user is at an ip previously said to be your home ip, or to a public ip if the user is accesing from an ip said to be an away ip. It also contains logic for designating an ip as home or away using a very snazy web page.
+ This is potentially useful if you don't want to reconfigure this everytime your dynamic IP switches.
  
  
  
