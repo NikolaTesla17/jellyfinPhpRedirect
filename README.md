@@ -12,16 +12,18 @@
 1: Download wamp, lamp, or a similar server based on your os.
 
 2: Follow this guide for configuring wamp:
- https://www.top10-websitehosting.co.uk/how-to-host-your-own-website
- is fairly well done, though please note, if your config file does not have allow from all/deny from all you will need to use "Require all granted" in its place.
+https://www.top10-websitehosting.co.uk/how-to-host-your-own-website
+is fairly well done, though please note, if your config file does not have allow from all/deny from all you will need to use "Require all granted" in its place.
  
 3. Set up port fowarding for your wamp or lamp server. I recomend changing the default port to be something like 8090 or something similar.
  
 4. Place these files in the www folder.
+
+5. Edit the commented lines in the file as they direct to your server's home and public ip.
  
-5. Go to your external ip address:port the wamp server is on to check if it is up.
+6. Go to your external ip address:port the wamp server is on to check if it is up.
  
-6. Click on "I am home"
+7. Click on "I am home"
  
  
-7. Redirecting should now work, note that you should map "your external ip address:the wamp server port" to a domain for a truly streamliened expirience. I reccomend a free .tk domain.
+8. Redirecting should now work, note that you should map "your external ip address:the wamp server port" to a domain for a truly streamliened expirience. I reccomend a free .tk domain.
