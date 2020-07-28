@@ -18,8 +18,8 @@ $current = file_get_contents($file);
 $current .= "$ip\n";
 file_put_contents($file, $current);
 
-//header('Location: http://10.0.0.17:8096');
-//change the above line to read the local ip of your server:whatever port it is on above is an example
+$internalIp = $SERVER['SERVER_ADDR']
+header("location: http://$internalIp:8096");
 
 ?> 
 </body>
