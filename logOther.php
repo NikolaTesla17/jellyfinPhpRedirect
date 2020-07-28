@@ -18,8 +18,12 @@ $current = file_get_contents($file);
 $current .= "$ip\n";
 file_put_contents($file, $current);
 
-//header('Location: http://216.58.216.164:8096');
-//change this line to the public facing ip of your server:the port of the server, above is an example using the ip of  
+
+$externalContent = file_get_contents('http://checkip.dyndns.com/');
+preg_match('/Current IP Address: \[?([:.0-9a-fA-F]+)\]?/', $externalContent, $m);
+$externalIp = $m[1];
+
+header("location: http://$externalIp:8096");
 
 ?> 
 </body>
