@@ -1,13 +1,3 @@
-<!-- This is the main file, it checks the ip a user is accesing from, then
-it sees if that ip has been listed before, either as a known home address
-or as a public ip address and if not, than it redirects to another
-page that lets the user log where the ip is. -->
-
-
-
-<!-- please change any commented out lines according to the comments near them -->
-
-
 <html>
   <head>
     <title>Nyflix</title>
@@ -24,22 +14,27 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
   
 echo "IP Address is: $ip", "<br>";
 
-
 $filename = 'ips.txt';
 $searchfor = $ip;
 $file = file_get_contents($filename);
-if(strpos($file, $searchfor) !==false) 
+$internalIp = $_SERVER['SERVER_ADDR'];
+$externalContent = file_get_contents('http://checkip.dyndns.com/');
+preg_match('/Current IP Address: \[?([:.0-9a-fA-F]+)\]?/', $externalContent, $m);
+$externalIp = $m[1];
+if((strpos($file, $searchfor) !==false)||($externalIp == $ip))
 {
     echo "found it", "<br>";
-    //header('Location: http://10.0.0.17:8096');
-    //change the above line to read the local ip of your server:whatever port it is on above is an example
+    header("location: http://$internalIp:8096");
 }else{
     $filename = 'otherips.txt';
     $searchfor = $ip;
     $file = file_get_contents($filename);
     if(strpos($file, $searchfor) !==false){
-        //header('Location: http://216.58.216.164:8096');
-        //change this line to the public facing ip of your server:the port of the server, above is an example using the ip of  
+        $externalContent = file_get_contents('http://checkip.dyndns.com/');
+        preg_match('/Current IP Address: \[?([:.0-9a-fA-F]+)\]?/', $externalContent, $m);
+        $externalIp = $m[1];
+        
+        header("location: http://$externalIp:8096");
     }
     else{
         header('Location: test.html');
