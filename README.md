@@ -13,9 +13,7 @@
 
 1: Download wamp, lamp, or a similar server based on your os.
 
-2: Follow this guide for configuring wamp:
-https://www.top10-websitehosting.co.uk/how-to-host-your-own-website
-is fairly well done, though please note, if your config file does not have allow from all/deny from all you will need to use "Require all granted" in its place.
+2: Follow this guide for configuring wamp:https://www.top10-websitehosting.co.uk/how-to-host-your-own-website is fairly well done, though please note, if your config file does not have allow from all/deny from all you will need to use "Require all granted" in its place.
 
 3. Set up port fowarding for your wamp or lamp server. I recomend changing the default port of the wamp server to be something like 8090 or something similar.
 
