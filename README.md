@@ -23,3 +23,10 @@
 
 
 Redirecting should now work, note that you should map "your external ip address:the wamp server port" to a domain for a truly streamliened expirience. I reccomend a free .tk domain because I am cheap.
+
+
+
+\\TODO
+Redo web interface
+make the code actually readable
+streamline setup because wamp sucks
