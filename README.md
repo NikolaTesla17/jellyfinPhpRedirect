@@ -26,7 +26,7 @@ Redirecting should now work, note that you should map "your external ip address:
 
 
 edit httdp.conf as well as httdp-vhosts.conf
-
+also this:https://likegeeks.com/auto-start-wampserver-windows-10-startup/
 
 \\TODO
 Redo web interface
